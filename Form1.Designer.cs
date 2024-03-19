@@ -72,9 +72,9 @@
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(120, 93);
             btnBack.TabIndex = 2;
+            btnBack.TabStop = false;
             btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = false;
-            btnBack.Click += EnableOperationKeys;
             btnBack.Click += ButtonBack_Click;
             // 
             // btnClear
@@ -90,9 +90,9 @@
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(119, 93);
             btnClear.TabIndex = 3;
+            btnClear.TabStop = false;
             btnClear.Text = "C";
             btnClear.UseVisualStyleBackColor = false;
-            btnClear.Click += EnableOperationKeys;
             btnClear.Click += ButtonClear_Click;
             // 
             // btnClearEntry
@@ -108,9 +108,9 @@
             btnClearEntry.Name = "btnClearEntry";
             btnClearEntry.Size = new Size(119, 93);
             btnClearEntry.TabIndex = 1;
+            btnClearEntry.TabStop = false;
             btnClearEntry.Text = "CE";
             btnClearEntry.UseVisualStyleBackColor = false;
-            btnClearEntry.Click += EnableOperationKeys;
             btnClearEntry.Click += ButtonClearEntry_Click;
             // 
             // btnPercent
@@ -126,8 +126,10 @@
             btnPercent.Name = "btnPercent";
             btnPercent.Size = new Size(119, 93);
             btnPercent.TabIndex = 0;
+            btnPercent.TabStop = false;
             btnPercent.Text = "%";
             btnPercent.UseVisualStyleBackColor = false;
+            btnPercent.Click += ButtonSpecialOperation_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -185,9 +187,9 @@
             btnNum0.Name = "btnNum0";
             btnNum0.Size = new Size(119, 96);
             btnNum0.TabIndex = 28;
+            btnNum0.TabStop = false;
             btnNum0.Text = "0";
             btnNum0.UseVisualStyleBackColor = false;
-            btnNum0.Click += EnableOperationKeys;
             btnNum0.Click += ButtonNumbers_Click;
             // 
             // btnPlusMinus
@@ -203,6 +205,7 @@
             btnPlusMinus.Name = "btnPlusMinus";
             btnPlusMinus.Size = new Size(119, 96);
             btnPlusMinus.TabIndex = 27;
+            btnPlusMinus.TabStop = false;
             btnPlusMinus.Text = "+/-";
             btnPlusMinus.UseVisualStyleBackColor = false;
             btnPlusMinus.Click += ButtonPlusMinus_Click;
@@ -220,9 +223,10 @@
             btnEqual.Name = "btnEqual";
             btnEqual.Size = new Size(120, 96);
             btnEqual.TabIndex = 26;
+            btnEqual.TabStop = false;
             btnEqual.Text = "=";
             btnEqual.UseVisualStyleBackColor = false;
-            btnEqual.Click += EnableOperationKeys;
+            btnEqual.Click += ButtonEqual_Click;
             // 
             // btnDot
             // 
@@ -237,6 +241,7 @@
             btnDot.Name = "btnDot";
             btnDot.Size = new Size(119, 96);
             btnDot.TabIndex = 25;
+            btnDot.TabStop = false;
             btnDot.Text = ".";
             btnDot.UseVisualStyleBackColor = false;
             btnDot.Click += ButtonDot_Click;
@@ -254,9 +259,9 @@
             btnNum2.Name = "btnNum2";
             btnNum2.Size = new Size(119, 93);
             btnNum2.TabIndex = 24;
+            btnNum2.TabStop = false;
             btnNum2.Text = "2";
             btnNum2.UseVisualStyleBackColor = false;
-            btnNum2.Click += EnableOperationKeys;
             btnNum2.Click += ButtonNumbers_Click;
             // 
             // btnNum7
@@ -272,9 +277,9 @@
             btnNum7.Name = "btnNum7";
             btnNum7.Size = new Size(119, 93);
             btnNum7.TabIndex = 23;
+            btnNum7.TabStop = false;
             btnNum7.Text = "7";
             btnNum7.UseVisualStyleBackColor = false;
-            btnNum7.Click += EnableOperationKeys;
             btnNum7.Click += ButtonNumbers_Click;
             // 
             // btnNum3
@@ -290,9 +295,9 @@
             btnNum3.Name = "btnNum3";
             btnNum3.Size = new Size(119, 93);
             btnNum3.TabIndex = 22;
+            btnNum3.TabStop = false;
             btnNum3.Text = "3";
             btnNum3.UseVisualStyleBackColor = false;
-            btnNum3.Click += EnableOperationKeys;
             btnNum3.Click += ButtonNumbers_Click;
             // 
             // btnAdd
@@ -308,6 +313,7 @@
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(120, 93);
             btnAdd.TabIndex = 21;
+            btnAdd.TabStop = false;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += ButtonBasicOperation_Click;
@@ -325,9 +331,9 @@
             btnNum6.Name = "btnNum6";
             btnNum6.Size = new Size(119, 93);
             btnNum6.TabIndex = 20;
+            btnNum6.TabStop = false;
             btnNum6.Text = "6";
             btnNum6.UseVisualStyleBackColor = false;
-            btnNum6.Click += EnableOperationKeys;
             btnNum6.Click += ButtonNumbers_Click;
             // 
             // btnNum5
@@ -343,9 +349,9 @@
             btnNum5.Name = "btnNum5";
             btnNum5.Size = new Size(119, 93);
             btnNum5.TabIndex = 19;
+            btnNum5.TabStop = false;
             btnNum5.Text = "5";
             btnNum5.UseVisualStyleBackColor = false;
-            btnNum5.Click += EnableOperationKeys;
             btnNum5.Click += ButtonNumbers_Click;
             // 
             // btnNum1
@@ -361,9 +367,9 @@
             btnNum1.Name = "btnNum1";
             btnNum1.Size = new Size(119, 93);
             btnNum1.TabIndex = 18;
+            btnNum1.TabStop = false;
             btnNum1.Text = "1";
             btnNum1.UseVisualStyleBackColor = false;
-            btnNum1.Click += EnableOperationKeys;
             btnNum1.Click += ButtonNumbers_Click;
             // 
             // btnSubtract
@@ -379,7 +385,8 @@
             btnSubtract.Name = "btnSubtract";
             btnSubtract.Size = new Size(120, 93);
             btnSubtract.TabIndex = 17;
-            btnSubtract.Text = "–";
+            btnSubtract.TabStop = false;
+            btnSubtract.Text = "-";
             btnSubtract.UseVisualStyleBackColor = false;
             btnSubtract.Click += ButtonBasicOperation_Click;
             // 
@@ -396,9 +403,9 @@
             btnNum9.Name = "btnNum9";
             btnNum9.Size = new Size(119, 93);
             btnNum9.TabIndex = 16;
+            btnNum9.TabStop = false;
             btnNum9.Text = "9";
             btnNum9.UseVisualStyleBackColor = false;
-            btnNum9.Click += EnableOperationKeys;
             btnNum9.Click += ButtonNumbers_Click;
             // 
             // btnNum8
@@ -414,9 +421,9 @@
             btnNum8.Name = "btnNum8";
             btnNum8.Size = new Size(119, 93);
             btnNum8.TabIndex = 15;
+            btnNum8.TabStop = false;
             btnNum8.Text = "8";
             btnNum8.UseVisualStyleBackColor = false;
-            btnNum8.Click += EnableOperationKeys;
             btnNum8.Click += ButtonNumbers_Click;
             // 
             // btnNum4
@@ -432,9 +439,9 @@
             btnNum4.Name = "btnNum4";
             btnNum4.Size = new Size(119, 93);
             btnNum4.TabIndex = 14;
+            btnNum4.TabStop = false;
             btnNum4.Text = "4";
             btnNum4.UseVisualStyleBackColor = false;
-            btnNum4.Click += EnableOperationKeys;
             btnNum4.Click += ButtonNumbers_Click;
             // 
             // btnMultiply
@@ -450,6 +457,7 @@
             btnMultiply.Name = "btnMultiply";
             btnMultiply.Size = new Size(120, 93);
             btnMultiply.TabIndex = 13;
+            btnMultiply.TabStop = false;
             btnMultiply.Text = "×";
             btnMultiply.UseVisualStyleBackColor = false;
             btnMultiply.Click += ButtonBasicOperation_Click;
@@ -467,8 +475,10 @@
             btnSquare.Name = "btnSquare";
             btnSquare.Size = new Size(119, 93);
             btnSquare.TabIndex = 12;
+            btnSquare.TabStop = false;
             btnSquare.Text = "x²";
             btnSquare.UseVisualStyleBackColor = false;
+            btnSquare.Click += ButtonSpecialOperation_Click;
             // 
             // btnInverse
             // 
@@ -483,8 +493,10 @@
             btnInverse.Name = "btnInverse";
             btnInverse.Size = new Size(119, 93);
             btnInverse.TabIndex = 11;
+            btnInverse.TabStop = false;
             btnInverse.Text = "1/x";
             btnInverse.UseVisualStyleBackColor = false;
+            btnInverse.Click += ButtonSpecialOperation_Click;
             // 
             // btnSquareRoot
             // 
@@ -499,8 +511,10 @@
             btnSquareRoot.Name = "btnSquareRoot";
             btnSquareRoot.Size = new Size(119, 93);
             btnSquareRoot.TabIndex = 10;
+            btnSquareRoot.TabStop = false;
             btnSquareRoot.Text = "√x";
             btnSquareRoot.UseVisualStyleBackColor = false;
+            btnSquareRoot.Click += ButtonSpecialOperation_Click;
             // 
             // btnDivide
             // 
@@ -515,6 +529,7 @@
             btnDivide.Name = "btnDivide";
             btnDivide.Size = new Size(120, 93);
             btnDivide.TabIndex = 9;
+            btnDivide.TabStop = false;
             btnDivide.Text = "÷";
             btnDivide.UseVisualStyleBackColor = false;
             btnDivide.Click += ButtonBasicOperation_Click;
@@ -529,6 +544,7 @@
             textMainDisplay.Name = "textMainDisplay";
             textMainDisplay.Size = new Size(501, 64);
             textMainDisplay.TabIndex = 1;
+            textMainDisplay.TabStop = false;
             textMainDisplay.Text = "0";
             textMainDisplay.TextAlign = HorizontalAlignment.Right;
             textMainDisplay.MouseDown += MainDisplay_MouseDown;
@@ -545,6 +561,7 @@
             textFormulaDisplay.ReadOnly = true;
             textFormulaDisplay.Size = new Size(501, 43);
             textFormulaDisplay.TabIndex = 2;
+            textFormulaDisplay.TabStop = false;
             textFormulaDisplay.TextAlign = HorizontalAlignment.Right;
             // 
             // SimpleCalculator
@@ -558,12 +575,13 @@
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             MaximizeBox = false;
             Name = "SimpleCalculator";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Simple Calculator";
-            TopMost = true;
             Load += Form1_Load;
+            KeyPress += SimpleCalculator_KeyPress;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
