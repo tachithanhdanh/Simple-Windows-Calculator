@@ -23,7 +23,7 @@ namespace Simple_Windows_Calculator
             NegativeSquareRoot
         }
         private readonly string[] errorText =
-        {   
+        {
             "No Error",
             "Cannot divide by zero",
             "Invalid input"
@@ -36,8 +36,7 @@ namespace Simple_Windows_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //this.BringToFront(); 
-            //this.Activate();
+
         }
 
         // Hide blinking cursor from textboxes
@@ -169,7 +168,7 @@ namespace Simple_Windows_Calculator
             else if (textFormulaDisplay.Text != String.Empty)
             {
                 operand[1] = mainDisplayValue;
-                if(ApplyBasicOperation() == ErrorCode.DivideByZero)
+                if (ApplyBasicOperation() == ErrorCode.DivideByZero)
                 {
                     HandleInvalidInput(ErrorCode.DivideByZero);
                     return;
@@ -238,6 +237,7 @@ namespace Simple_Windows_Calculator
 
         private void ButtonEqual_Click(object sender, EventArgs e)
         {
+            EnableOperationKeys(sender, e);
             if (textMainDisplay.Text != result.ToString(precisionFormat) || textMainDisplay.Text == "0")
             {
                 operand[1] = Double.Parse(textMainDisplay.Text);
@@ -354,7 +354,6 @@ namespace Simple_Windows_Calculator
         // https://stackoverflow.com/a/3172762/23524865
         private void SimpleCalculator_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //MessageBox.Show("Bat duoc su kien");
             switch (e.KeyChar)
             {
                 case (char)Keys.D0:
@@ -400,13 +399,52 @@ namespace Simple_Windows_Calculator
                 case (char)Keys.Back:
                     btnBack.PerformClick();
                     break;
-                case (char)Keys.Delete:
-                    btnClear.PerformClick();
-                    break;
                 default:
                     break;
             }
+        }
 
+        private void SimpleCalculator_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Oemplus || e.KeyCode == Keys.Add)
+            {
+                btnAdd.PerformClick();
+            }
+            else if (e.KeyCode == Keys.OemMinus || e.KeyCode == Keys.Subtract)
+            {
+                btnSubtract.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Multiply || (e.Shift && e.KeyCode == Keys.D8))
+            {
+                btnMultiply.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Divide || e.KeyCode == Keys.OemQuestion)
+            {
+                btnDivide.PerformClick();
+            }
+            else if (e.KeyCode == Keys.OemPeriod || e.KeyCode == Keys.Decimal)
+            {
+                btnDot.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Delete)
+            {
+                btnClearEntry.PerformClick();
+            }
+        }
+
+        // https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.processcmdkey
+        // Sử dụng phím này để bắt phím Enter trước khi xảy ra sự kiện nhấn phím vì phím Enter có thể
+        // bị nuốt bởi Control trên màn hình trước khi Forms bắt được phím
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter && this.ActiveControl != null)
+            {
+                if (this.ActiveControl.Handle != this.btnEqual.Handle)
+                {
+                    this.btnEqual.Select();
+                }
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

@@ -581,6 +581,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Simple Calculator";
             Load += Form1_Load;
+            KeyDown += SimpleCalculator_KeyDown;
             KeyPress += SimpleCalculator_KeyPress;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
