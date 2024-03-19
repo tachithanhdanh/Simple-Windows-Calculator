@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple-Windows-Calculator", "Simple-Windows-Calculator.csproj", "{148FD0B0-46AF-4D6E-AA65-10CF879DCE71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple-Windows-Calculator", "Calculator\\Simple-Windows-Calculator.csproj", "{148FD0B0-46AF-4D6E-AA65-10CF879DCE71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
